@@ -1,0 +1,30 @@
+/********** Large devices only **********/
+@media only screen and (min-width: 1200px) {
+   .col-lg-4{
+    float: left;
+    border: 1px solid black;
+    width: 33.33%;
+  }
+}
+
+/********** Medium devices only **********/
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .col-md-6, .col-md-12 {
+    float: left;
+    border: 1px solid green;
+  }
+  .col-md-6 {
+    width: 50%;
+  }
+  .col-md-12 {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 991px){
+  .col-sm-12 {
+    float: left;
+    border: 1px solid red;
+    width: 100;
+  }
+}

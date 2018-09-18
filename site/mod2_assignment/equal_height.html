@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Equal height test</title>
+
+    <style>
+
+    .col-container {
+      display: table; /* Make the container element behave like a table */
+      /*display: flex; */
+      width: 100%; /* Set full-width to expand the whole page */
+
+    }
+
+    .col {
+      display: table-cell; /* Make elements inside the container behave like table cells */
+      /*flex: 1; */    
+      /*border: 5px solid black; */
+    }
+
+.col:nth-child(even) {
+  background: #ccc;
+}
+.col:nth-child(odd) {
+  background: #eee;
+}
+
+h2 {
+  background: black
+  width: 33%;
+}
+
+    /* If the browser window is smaller than 600px, make the columns stack on top of each other */
+    @media only screen and (max-width: 600px) {
+        .col { 
+            display: block;
+            width: 100%;
+        }
+    }
+
+
+
+    </style>
+
+
+</head>
+
+<body>
+
+<div class="col-container">
+  <div class="col">
+    <h2>Column 1</h2>
+    <p>Hello World</p>
+  </div>
+
+  <div class="col">
+    <h2>Column 2</h2>
+    <p>Hello World!</p>
+    <p>Hello World!</p>
+    <p>Hello World!</p>
+    <p>Hello World!</p>
+  </div>
+
+  <div class="col">
+    <h2>Column 3</h2>
+    <p>Some other text..</p>
+    <p>Some other text..</p>
+  </div>
+</div>
+</body>
+</html>

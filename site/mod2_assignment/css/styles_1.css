@@ -1,0 +1,41 @@
+/********** Base styles **********/
+* {
+  box-sizing: border-box;
+  font-family: "Book Antiqua";
+
+}
+
+h1 {
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.row {
+  width: 100%;
+  display: flex;
+  overflow: auto;
+}
+
+.box {
+  flex: 1;
+  background-color: #AAAAAA;
+  color: white;
+  text-align: justify;
+  padding: 10px;
+  margin-left: 20px;
+  margin-right: 20px;
+
+}
+
+h2{
+  position: relative;
+  background-color: #222222;
+  color: white;
+  border: 1px solid white;
+  text-align: center;
+  width: 40%;
+  margin-inline-start: 60%;
+}
+
+
+
