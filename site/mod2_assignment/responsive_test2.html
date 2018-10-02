@@ -3,7 +3,8 @@
 
 <head>
 <meta charset="utf-8">
-	<!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Responsive test</title>
     <!--<link rel="stylesheet" href="css/styles_1.css">
     <link rel="stylesheet" href="css/responsive.css">--->
@@ -15,6 +16,7 @@
 }
 
 h1 {
+  font-size: 5vw;
   margin-bottom: 15px;
   text-align: center;
 }
@@ -22,28 +24,37 @@ h1 {
 .row {
   width: 100%;
   display: flex;
+  flex-wrap: wrap;
   overflow: auto;
 }
 
-.box {
+.column{
   flex: 1;
-  background-color: #AAAAAA;
   color: white;
   text-align: justify;
+  background-color: #AAAAAA;
   padding: 10px;
   margin-left: 20px;
   margin-right: 20px;
 
 }
 
-h2{
+.box {
+  height: 100%;
   position: relative;
+}
+
+h2{
+  position: absolute;
   background-color: #222222;
   color: white;
   border: 1px solid white;
   text-align: center;
   width: 40%;
-  margin-inline-start: 60%;
+  top: 0;
+  right: 0;
+  margin-inline-start: 60%; 
+  padding: 0;
 }
 
 /********** Large devices only **********/
@@ -73,7 +84,7 @@ h2{
   .col-sm-12 {
     float: left;
     border: 1px solid red;
-    width: 100;
+    width: 100%;
   }
 }
 
@@ -86,14 +97,14 @@ h2{
 <body>
 	<h1>Responsive layout test</h1>
 	<div class = "row">
-		<div class="col-lg-4 col-md-6 col-sm-12">
+		<div class="col-lg-4 col-md-6 col-sm-12 column">
 			<div class="box">
 			<h2>I am number 1!</h2>
 			<p>
       Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
 		</div>
 		</div>
-		<div class="col-lg-4 col-md-6 col-sm-12">
+		<div class="col-lg-4 col-md-6 col-sm-12 column">
 			<div class="box">
 			<h2>I am number 2!</h2>
 			<p>
@@ -101,7 +112,7 @@ h2{
 			</p>
 			</div>
 		</div>
-		<div class="col-lg-4 col-md-12 col-sm-12">
+		<div class="col-lg-4 col-md-12 col-sm-12 column">
 			<div class="box">
 			<h2>I am number 3!</h2>
 			<p>
